@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+	th:replace="admin/base::layout(~{::section})">
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+
+<style>
+
+</style>
+
+<body>
+
+<section>
+
+<div class="container">
+
+	
+	<!-- Search TAG -->
+	<!-- SEARCHING FORM -->                
+	<div class="card border-0 mt-3 mb-3"  style="max-width: 16rem;margin: auto;" >
+	
+	
+	
+	<div class="row">
+	
+		<div >
+		
+		  <form th:action="@{'~/admin/adminpanel/searchImagesToImageHub'}" method="post">
+ 			 <div class="form-group form-inline">
+   				 
+    			   <input type="text" name="imageName" class="form-control form-control-sm"  placeholder="Search images">
+   					<button type="submit" class="btn btn-primary btn-sm btn-light">Search</button>
+  				</div>
+ 
+		  </form>
+		
+		</div>
+	
+	</div>
+	
+</div>
+			<!-- SEARCHING FORM END !!!-->
+			
+			
+	<!--  TOTAL IMAGES COUNT-->		
+	<div >
+    <p class="text-dark bg-light p-2" >Total images :<span th:text=${totalImages}></span></p>
+   </div>
+			
+			
+			
+			<!-- ----------------------------------------------------------------------------------------------------------- -->
+			
+			
+			
+			<!-- 					show message Box if data is available  -->
+						<div  th:if="${session.message}" class="container">
+						<div th:classappend="${session.message.messageType}" class="alert alert-primary text-center" role="alert">
+  						<span  th:remove="tag" th:utext="${session.message.message}"></span>
+							</div>
+							<span th:remove="tag" th:utext="${#session.removeAttribute('message')}"></span>
+						</div>
+			<!-- 					End show message Box if data is available  -->
+			
+			<!-- ----------------------------------------------------------------------------------------------------------- -->
+	
+	
+	
+	
+    <div th:if="${hubImages !=null}" class="row">
+    
+   
+    
+       
+        	<div class="col-md-3 mt-3" th:each="hub : ${hubImages}">
+           
+                <img id="myImg" th:alt="${hub.imageUrl}" th:src="${hub.imageUrl}" height="200" width="260" >
+               	
+               	<input style="font-size: 12px;"  type="text" id="inputHidden"  th:value="${hub.imageUrl}" >
+
+
+				<button th:onclick="myFunction([[${hub.imageUrl}]])" class=" btn btn-sm btn-light text-dark" >
+				<i style="font-size: 10px;" class="fas fa-link"></i> copy
+				</button>
+               	
+            </div>
+       
+    </div>
+    
+    
+    <div th:if="${searchImages != null}" class="row">
+
+   
+    	<div class="col-md-3 mt-3" th:each="hub : ${searchImages}">
+           
+                <img id="myImg" th:alt="${hub.imageUrl}" th:src="${hub.imageUrl}" height="200" width="260" >
+               	
+               	<input style="font-size: 12px;"  type="text" id="inputHidden"  th:value="${hub.imageUrl}" >
+
+
+				<button th:onclick="myFunction([[${hub.imageUrl}]])" class=" btn btn-sm btn-light text-dark" >
+				click
+				</button>
+               	
+            </div>
+    	
+    </div>
+    
+   
+    
+    
+    
+</div>
+
+
+
+<script>
+function myFunction(text) {
+	console.log("fun...")
+	navigator.clipboard.writeText(text).then(function() {
+		  alert("Link Copied");
+		}, function(err) {
+		  console.error('Async: Could not copy Link: ', err);
+		});
+
+}
+</script>
+
+</section>
+
+</body>
+</html>

@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+	th:replace="admin/base::layout(~{::section})">
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+
+<section>
+
+
+
+		<div class="container-fuild mt-5">
+		
+		
+		
+			<!-- 					show message Box if data is available  -->
+						<div  th:if="${session.message}" class="container">
+						<div th:classappend="${session.message.messageType}" class="alert alert-primary text-center" role="alert">
+  						<span th:text="${session.message.message}"></span>
+							</div>
+							<span th:text="${#session.removeAttribute('message')}"></span>
+						</div>
+			<!-- 					End show message Box if data is available  -->
+		
+		
+		
+		
+		
+
+			<div class="card p-4 mb-5" style="max-width: 38rem; margin: auto;">
+				<div class="card-body">
+
+					<h5 class="card-title text-center mb-4">Create Sub-Category</h5>
+
+
+					<!-- FORM STARTNG... -->
+					<form th:action="@{'~/admin/adminpanel/createSubCategory'}" method="post" enctype="multipart/form-data" > 
+					
+					
+					<div class="form-group">
+				  <label for="exampleFormControlSelect1">Select Category</label>
+   					<select name="courseCategoryId" class="form-control ">
+  					<option th:value="${0}"  > Category List</option>
+  					<option th:each="list : ${categoryList}" th:value="${list.catId}" th:text="${list.catId+'-'+list.categoryName}" >
+  					</option>
+				</select>
+				  </div>
+					
+
+						<div class="form-group">
+							<label for="exampleFormControlInput1">sub category Name</label> <input
+								type="text" name="subcatName" class="form-control"
+								required="required"
+								placeholder="category Name">
+						</div>
+
+
+
+						<div class="form-group">
+							<label for="exampleFormControlInput1">sub category Title</label> <input
+								type="text" name="subcatTitle" class="form-control"
+								required="required"
+								placeholder="category Title">
+						</div>
+
+						<div class="form-group">
+							<label for="exampleFormControlTextarea1">sub categoryDescription</label>
+							<textarea name="subcatDescription" class="form-control"
+								id="exampleFormControlTextarea1" rows="3"></textarea>
+						</div>
+
+						<div class="form-group">
+							<label for="exampleFormControlInput1"> sub category Keyword</label> <input
+								type="text" name="subcatKeyword" class="form-control"
+								placeholder="category Keyword">
+						</div>
+
+
+
+
+						<div class="form-group">
+							<label for="exampleFormControlInput1">sub category url</label> <input
+								type="text" name="subcatUrl" class="form-control"
+								required="required"
+								placeholder="category url">
+						</div>
+
+						<div class="form-group">
+							<label for="exampleFormControlSelect1">sub category status</label> <select
+								class="form-control" name="subcatStatus" >
+								<option value="show" >show</option>
+								<option value="hide"  >hide</option>
+
+							</select>
+						</div>
+						
+						<div class="form-group">
+							<label for="exampleFormControlFile1">sub Category Image</label> <input
+								type="file" name="file" class="form-control-file"
+								id="exampleFormControlFile1">
+						</div>
+							
+						
+						<div class="text-center mt-4 " >
+						<button  type="submit" class="btn btn-primary btn-block">create category</button>
+						</div>
+						
+
+
+					</form>
+
+
+
+
+
+				</div>
+			</div>
+
+
+		</div>
+
+
+</section>
+
+</body>
+</html>

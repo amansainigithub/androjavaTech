@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html  xmlns:th="http://www.thymeleaf.org"
+	th:replace="admin/base::layout(~{::section})">
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+
+
+<section>
+
+
+<div class="container-fuild mt-5">
+		
+		
+		
+			<!-- 					show message Box if data is available  -->
+						<div  th:if="${session.message}" class="container">
+						<div th:classappend="${session.message.messageType}" class="alert alert-primary text-center" role="alert">
+  						<span th:text="${session.message.message}"></span>
+							</div>
+							<span th:text="${#session.removeAttribute('message')}"></span>
+						</div>
+			<!-- 					End show message Box if data is available  -->
+		
+		
+		
+		
+		
+
+			<div class="card p-4 mb-5" style="max-width: 45rem; margin: auto;">
+				<div class="card-body">
+
+					<h5 class="card-title text-center mb-4">Create sub-chapter</h5>
+
+
+					<!-- FORM STARTNG... -->
+					<form th:action="@{'~/admin/adminpanel/createChapter'}" method="post"  > 
+					
+					
+					<div class="form-group">
+				  <label for="exampleFormControlSelect1">Select Category</label>
+   					<select name="subCategoryId" class="form-control ">
+  					<option th:value="${0}"  > Category List</option>
+  					<option th:each="list : ${subcategoryList}" th:value="${list.subcatId}" th:text="${list.subcatId+'-'+list.subcatName}" >
+  					</option>
+				</select>
+				  </div>
+					
+
+						<div class="form-group">
+							<label for="exampleFormControlInput1">chapter Name</label> <input
+								type="text" name="chapterName" class="form-control"
+								required="required"
+								placeholder="chapter Name">
+						</div>
+
+
+
+						<div class="form-group">
+							<label for="exampleFormControlInput1">chapter Title</label> <input
+								type="text" name="chapterTitle" class="form-control"
+								required="required"
+								placeholder="chapter Title">
+						</div>
+						
+						<div class="form-group">
+							<label for="exampleFormControlInput1">chapter sub-title</label> <input
+								type="text" name="chapterSubTitle" class="form-control"
+								
+								placeholder="chapter sub-Title">
+						</div>
+
+						<div class="form-group">
+							<label for="exampleFormControlTextarea1">chapter Description</label>
+							<textarea name="chapterDescription" class="form-control"
+								id="exampleFormControlTextarea1" rows="3"></textarea>
+						</div>
+						
+						
+						<!-- CONTENT -->
+						
+						<div class="form-group">
+							<label for="exampleFormControlTextarea1">chapter Content</label>
+							<textarea name="chapterContent" class="form-control"
+							required="required"
+								 rows="3"></textarea>
+								  <script>
+                                CKEDITOR.replace( 'chapterContent' );
+                            </script>
+						</div>
+
+
+
+						<div class="form-group">
+							<label for="exampleFormControlInput1">chapter Keywords</label> <input
+								type="text" name="chapterKeywords" class="form-control"
+								required="required"
+								placeholder="chapter Keywords">
+						</div>
+
+
+
+						<div class="form-group">
+							<label for="exampleFormControlInput1">chapter Url (LIKE java,phyton,c++)</label> <input
+								type="text" name="chapterUrl" class="form-control"
+								required="required"
+								placeholder="category url">
+						</div>
+
+						<div class="form-group">
+							<label for="exampleFormControlSelect1">sub category status</label> <select
+								class="form-control" name="chapterStatus" >
+								<option value="show" >show</option>
+								<option value="hide"  >hide</option>
+
+							</select>
+						</div>
+						
+<!-- 						<div class="form-group"> -->
+<!-- 							<label for="exampleFormControlFile1">chapter Image</label> <input -->
+<!-- 								type="file" name="file" class="form-control-file" -->
+<!-- 								id="exampleFormControlFile1"> -->
+<!-- 						</div> -->
+							
+						
+						<div class="text-center mt-4 " >
+						<button  type="submit" class="btn btn-primary btn-block">create chapter</button>
+						</div>
+						
+
+
+					</form>
+
+
+
+
+
+				</div>
+			</div>
+
+
+		</div>
+
+
+
+
+</section>
+
+
+</body>
+</html>

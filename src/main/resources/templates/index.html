@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+	th:replace="base::layout(~{::section})">
+<head>
+<meta charset="ISO-8859-1">
+<title>index</title>
+
+<!-- GOOGLE FONTS -->
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link
+	href="https://fonts.googleapis.com/css2?family=Playfair+Display&family=Rubik&display=swap"
+	rel="stylesheet">
+
+<link
+	href="https://fonts.googleapis.com/css2?family=PT+Serif:wght@400;700&family=Rubik&family=Ubuntu&display=swap"
+	rel="stylesheet">
+
+<!----  -->
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=ABeeZee&family=Lora&family=PT+Sans&family=Roboto:wght@100&display=swap" rel="stylesheet">
+  <!-- header Tag -->
+<link href="//fonts.googleapis.com/css?family=Work+Sans:100,200,300,400,500,600,700,800,900&amp;subset=latin-ext" rel="stylesheet">
+<link href='//fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600,600italic,700,700italic,800,800italic' rel='stylesheet' type='text/css'>
+
+<link href="https://fonts.googleapis.com/css2?family=PT+Serif:wght@400;700&family=Rubik&family=Ubuntu&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100&family=Raleway:wght@200;300&display=swap" rel="stylesheet">
+
+</head>
+<body>
+
+
+	<section class="bg-white">
+
+
+		<div class="card bg-dark text-white border-0">
+			<img id="homeImage" th:src="@{'~/home/images/homeImage.jpg'}"
+				alt="Card image">
+
+			<div class="card-img-overlay cardImageOverlay">
+
+				<div class="text-center">
+
+					<h2 id="rootimageh2" class="mt-5">
+						WE GENERATE MOST VALUABLE <span class="text-primary"> IDEAS
+						</span>
+					</h2>
+
+					<h5>AndrojavaTech4u</h5>
+
+
+					<div style="margin: auto; margin-top: 40px;">
+
+						<a class="btn btn-light" href="/contact" > 
+								 <span style="font-weight: bold;">contact us</span>
+						</a>
+						
+						<a type="button" class="btn btn-primary" data-toggle="modal"
+								 data-target="#exampleModalCenter" href="#"> <span
+							style="font-weight: bold;">Ask For a Question</span>
+						</a>
+						
+						<h5 class="mt-4">
+						<i class="fa fa-envelope" style="font-size:20px;color: rgba(234,1,13,255)"></i>
+						<span>androjavatech4u@gmail.com</span>  </h5>
+						
+						<h5 class="mt-2">
+						<i  class="fas fa-phone-alt" style="font-size:20px;color: rgba(234,1,13,255)"></i> call us :
+						<span >(+91) 9310683500</span>  </h5>
+
+					</div>
+
+				</div>
+
+			</div>
+
+		</div>
+
+
+		<div class="container  bg-white mt-5 pb-5">
+
+			<div class="row">
+
+				<div class="col-md-8">
+
+					<div class="card border-0" style="max-width: 40rem; margin: auto;">
+						<div class="card-body">
+							<h2 class="card-title text-center " id="lm107"> <span >Welcome TO AndroJavaTech4U</span> </h2>
+
+							<p class="mt-4 " >Welcome to the AndroJavaTech4U where you
+								get to learn the latest and mostly used Programming languages in
+								the IT world. Programming skills are very important nowadays if
+								you want to take steps in the IT world and want to become a
+								successful developer. You will find all you need to know about
+								programming with a collection of step-by-step lessons covering
+								beginner, intermediate, and advanced topics. Whether you are a
+								college student with no prior knowledge looking for learn
+								programming or a company employee learning advanced topics for
+								building an application, this tutorial would definitely be
+								useful for you as you won't face any difficulty in understanding
+								the tutorials which are provided here. Let's start learning.</p>
+
+						</div>
+					</div>
+					
+<!-- 					FETCHING LATEST COURSES STARTING  -->
+					<div>
+					
+					<div class="row mb-5">
+						
+						<div class="col-md-3 ml-4 mt-4" th:each="courseCategoryList : ${courseCaegoryList}">
+						
+							<div class="card shadow-sm"  style="width: 12rem;box-shadow: 0 0px 3px 0 rgba(0, 0, 0, 0.2), 0 6px 16px 0 rgba(0, 0, 0, 0.19);">
+  								
+  								<div class="card-body p-2 text-center" >
+	  								
+	  								<img  class="card-img-top mb-2" 
+	  								th:src="@{'~/categoryImages/'+${courseCategoryList.catImageName}}" 
+	  								height="120" width="40" 
+	  								alt="Card image cap">
+    									
+    									<a class="mt-4 font-weight-bold" 
+    									th:href="@{'~/'+${courseCategoryList.categoryUrl}+'/chapter/'+${courseCategoryList.catId}}" 
+    									th:text="${courseCategoryList.categoryName}" ></a>
+    								
+    								
+  								</div>
+							</div>
+							
+							
+						
+						</div>
+					
+					</div>
+							
+					
+					</div>
+<!-- 					FETCHING COURSES ENDING -->
+					
+					
+
+				</div>
+				
+				
+				
+				
+				
+				
+				
+				
+	<!-- --------------------------------------------SECTION SIDEBAR------------------------------------------------------ -->
+				
+				
+
+				<div class="col-md-4">
+				
+				
+				<div class="text-center mb-3">
+				<img  th:src="@{'~/logo/androjavatech4ulogo.jpg'}" width="220" height="100" class="d-inline-block align-top" alt="">
+				</div>
+				
+					
+					
+					<!-- Image -->
+					<img  th:src="@{'~/home/images/technology2.png'}" width="300" height="250" 
+					class="d-inline-block align-top" alt="">
+					
+					<div class="text-center mt-3">
+						 <a  href="https://www.facebook.com/AndroJavaTech4U/"  target="_blank"
+						 class="btn btn-light fab fa-facebook"  type="button" 
+						 title="youtube" 
+						 style="font-size:22px;color: #4267B2;background-color: #D7DBDD;">
+						 
+						 <span>+ Join Facebook</span>
+						 </a>
+					</div>
+					
+					<div class="text-center mt-3">
+						 <a  href="https://www.youtube.com/channel/UCr_JF45WJY5DIcXon2a2qlg"  target="_blank"
+						 class="btn btn-light fab fa-youtube "  type="button" 
+						 title="youtube" 
+						 style="font-size:22px;color: #F4224E;background-color: #D7DBDD;">
+						 
+						 <span>+ Join Youtube</span>
+						 </a>
+					</div>
+					
+				
+					
+					<div class="text-center mt-3">
+						 <a  href="https://www.facebook.com/AndroJavaTech4U/"  target="_blank"
+						 class="btn btn-light fab fa-telegram"  type="button" 
+						 title="youtube" 
+						 style="font-size:22px;color: #4267B2;background-color: #D7DBDD;">
+						 
+						 <span>+ Join Telegram</span>
+						 </a>
+					</div>
+
+				</div>
+				
+				
+
+			</div>
+
+		</div>
+		
+		
+ <!-- -------------------------------------------------------------------------------------------------- -->
+ 
+ 
+ 
+ 
+ 
+ 
+		
+		<!-- YOUTUBE  VIDEOS-->
+		
+			<div class="container">
+			
+				<h3 class="mb-3">
+				 <a  href="https://www.youtube.com/channel/UCr_JF45WJY5DIcXon2a2qlg"  target="_blank"
+					 class="fab fa-youtube" 
+					 title="youtube" 
+					 style="font-size:40px;color: #F4224E">
+					 <span>Youtube</span>
+				 </a>
+				</h3>
+				
+			
+			<div class="row ">
+				
+				<div class="col-md-3">
+					
+					<div class="card border-0" style="width: 18rem" >
+						<iframe width="270" height="200" 
+							src="https://www.youtube.com/embed/bWS4SZTVjUQ" 
+							title="YouTube video player" 
+							frameborder="0" 
+							allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+							allowfullscreen>
+						</iframe>
+					</div>
+					
+				</div>
+				
+				<div class="col-md-3">
+					
+					<div class="card border-0" style="width: 18rem" >
+						<iframe width="270" height="200" 
+							src="https://www.youtube.com/embed/N_IVSSHkyac" 
+							title="YouTube video player" 
+							frameborder="0" 
+							allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+							allowfullscreen>
+						</iframe>
+					</div>
+				
+				</div>
+				
+				<div class="col-md-3">
+					
+					<div class="card border-0" style="width: 18rem" >
+						<iframe width="270" height="200" 
+							src="https://www.youtube.com/embed/TYzWSWAQhDg" 
+							title="YouTube video player" frameborder="0" 
+							allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+							allowfullscreen>
+						</iframe>
+					</div>
+				
+				</div>
+				
+				<div class="col-md-3">
+					
+					<div class="card border-0" style="width: 18rem" >
+						<iframe width="270" height="200" 
+							src="https://www.youtube.com/embed/EinNCREI6pU" 
+							title="YouTube video player" 
+							frameborder="0" 
+							allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+							allowfullscreen>
+						</iframe>
+					</div>
+				
+				</div>
+			
+			</div>
+			
+				<div class="text-center mt-3">
+					 <a  href="https://www.youtube.com/channel/UCr_JF45WJY5DIcXon2a2qlg"  target="_blank"
+					 class=" btn btn-light btn-sm font-weight-bold2"  type="button" 
+					 title="youtube" 
+					 style="font-size:20px;color: #F4224E;;background-color: #D7DBDD;">
+					 <img alt="youtube" th:src="@{'~/home/images/youtube.svg'}" height="35" width="35">
+					 <span>Join Youtube</span>
+					  
+				 </a>
+				</div>
+			
+				
+			
+			</div>
+		
+		
+		<!-- YOUTUBE  VIDEOS ENDING-->
+		
+		
+		<!-- -------------------------------------------------------------------------------------------------- -->
+
+		
+		<!-- AUTHOR -->
+		
+		<div class="container">
+		<hr class="mt-5" />
+		
+			<div class="row">
+			
+			
+			<div class="col-md-6">
+				
+				<div class="text-center mt-5" >
+				<img height="220" width="220" alt="AndroJavaTech4U" title="AndroJavaTech4U" class="img-responsive rounded-circle" th:src="@{'~/author_image/surya.jpg'}">
+				
+				
+				<!-- SOCIAL ICONS -->
+					 <div id="author-social-div " class="text-center mt-4" style="margin-right: 60px;" >
+							 
+							 	<ul class="a" id="author_social_link">
+  											<li id="author_social_link">
+  											<a  href="https://www.facebook.com/AndroJavaTech4U/" target="_blank" id="facebook" title="facebook" class="fab fa-facebook-square" style="font-size:25px;color: #0993b2"></a>
+  											</li>
+  											
+										  <li id="author_social_link">
+										  <a href="" class="fab fa-instagram" target="_blank" title="instagram" style="font-size:25px;color:#F85289;"></a>
+										  </li>
+										  
+										  <li id="author_social_link">
+										  <a  href="https://www.youtube.com/channel/UCr_JF45WJY5DIcXon2a2qlg"  target="_blank" class="fab fa-youtube" title="youtube" style="font-size:25px;color: #F4224E"></a>
+										  </li>
+										  
+										    <li id="author_social_link">
+										  <a href="#" class="fab fa-twitter-square" target="_blank" title="twitter" style="font-size:25px;color:#1F5DD2"></a>
+										  </li>
+									</ul>
+							 
+							 </div>
+				<!-- SOCIAL ICONS ENDING -->	
+				
+				
+				</div>
+			
+			</div>
+			
+			
+			<div class="col-md-6 mt-4 mb-5">
+				
+				<h2 id="author_name" style="font-size: 30px;" class="text-center">Author</h2>
+				
+				<p id="author_name" class="text-center"  >Surya Prakash Tripathi</p>
+					
+					<p class="text-center" 
+						style="font-size: 20px;color: #0A74BB;text-decoration: underline;text-transform: uppercase;">
+						Senior Software Analyst
+					 </p>
+					 
+					<p style="font-family: roboto,sans-serif;font-size: 16px;line-height: 1.5;color:#909497;">
+					 Surya Prakash Tripathi is a mca from IGNU and senior
+					 Software Analyst at NIIT Technologies. lt. He has the
+					   experience more than 10 years with expertise in the technologies Java,
+					    Android ,Automation Testing , DevOops CI/CD </p>
+			</div>
+			
+			</div>
+			
+		
+		</div>
+		
+		<!-- -------------------------------------------------------------------------------------------------- -->
+		
+		
+		<!-- MODEL CONTACT US STARTING-->
+		
+		
+		<!-- Modal -->
+<div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLongTitle">Ask Question</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+      	
+      	<!-- FORM STARTING -->
+      	
+					<form th:action="@{'~/question'}"  method="post" >
+						  <div class="form-row">
+						    <div class="form-group col-md-6">
+						      <label for="inputEmail4">Name</label>
+						      <input type="text" maxlength="20" name="name" required="required" class="form-control" id="name" placeholder="Name">
+						    </div>
+						    <div class="form-group col-md-6">
+						      <label for="inputPassword4">Email</label>
+						      <input type="email"  maxlength="50" name="email" required="required"  class="form-control" id="email" placeholder="Email">
+						    </div>
+						  </div>
+						  
+						   <div class="form-group">
+						    <label for="exampleFormControlTextarea1">Enter Question</label>
+						    <textarea class="form-control" name="question" maxlength="250" required="required" id="question" rows="4"></textarea>
+						  </div>
+						
+						 <div class="text-center">
+							  <button th:onclick="queryForm()" type="submit" class="btn btn-primary">submit Question ?</button>
+						 </div>
+						</form>
+      
+        <!-- FORM ENDING -->
+        
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary btn-sm" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+		
+		
+		<!-- MODEL CONTACT US ENDING -->
+		
+		
+		
+		
+		
+
+
+
+	</section>
+
+</body>
+</html>

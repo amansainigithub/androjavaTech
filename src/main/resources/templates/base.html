@@ -1,0 +1,264 @@
+<!doctype html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org" th:fragment="layout(content)">
+  <head  >
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    
+    <!-- LOGO -->
+	 <link rel="shortcut icon" type="image/png" th:href="@{~/logo/onlyLogoName.PNG}"  />
+	 
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+	 <!-- Link css Files -->
+	<link rel="stylesheet" th:href="@{~/home/homeStyle.css}"  />
+	
+	 <!-- Link Javascript Files -->
+	<script type="text/javascript" th:src="@{~/home/homeScript.js}"  ></script>
+	
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+	
+<!-- 	GOOGLE FONTS -->
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Rubik&family=Ubuntu&display=swap" rel="stylesheet">
+
+<!--  ***************-->
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Barlow:wght@200&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Barlow:wght@200&family=Nunito:wght@300&display=swap" rel="stylesheet">
+
+     <title th:text="${title}" ></title>
+  </head>
+  <body  style="background-color: whitesmoke;">
+   
+   
+   
+   
+   
+   
+   
+   
+   
+    
+    <!-- NAVBAR STARTING -->
+    
+    <div class="container-fluid" style="background-color:white;">
+  
+  			<div class="row">
+  			
+  			<div class="col-md-4">
+  			
+  			
+  			
+  			 <a class="navbar-brand" href="/">
+    			<img  th:src="@{'~/logo/androjavatech4ulogo.jpg'}" width="220" height="100" class="d-inline-block align-top" alt="">
+  			</a>
+  			
+  			</div>
+  			
+  			<div class="col-md-4"></div>
+  			
+  			<div class="col-md-4"></div>
+  			
+  			
+  			</div>
+  	
+  
+  
+</div>
+    
+    <!-- NAVBAR ENDING -->
+    
+    <!----------------------------------------------------------------------------------------------  -->
+    
+    
+    
+    
+    <!-- NAVBAR-2 -->
+    <div th:if="${course == null}">
+    <nav class="navbar navbar-expand-lg navbar-dark p-1" style="background-color:rgba(234,1,13,255)">
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNav">
+    <ul class="navbar-nav">
+      
+       <li class="nav-item font-weight-bold" >
+        <a style="color: white !important;
+				font-size: 15px;
+				font-family: 'Barlow', sans-serif;
+				font-family: 'Nunito', sans-serif;" 
+				href="/" class="nav-link fontColorStyle">Home</a>
+      </li>
+      
+      <li class="nav-item ml-3 font-weight-bold" th:each="courseList,i : ${courseCategory}"   >
+      
+        <a th:if="${i.index &lt; 12}" style="color: white !important;
+				font-size: 15px;
+				font-family: 'Barlow', sans-serif;
+				font-family: 'Nunito', sans-serif;" 
+				th:href="@{'~/'+${courseList.category_url}+'/'+chapter+'/'+${courseList.catId}}"
+         	class="nav-link " 
+         	 href="#" th:text=${courseList.categoryName} > 
+        </a>
+<!--         class="nav-link" style="color: white;font-size: 15px;font-family: 'Barlow', sans-serif;" -->
+        	
+        	
+        
+        
+      </li>
+    
+    </ul>
+  </div>
+</nav>
+</div>
+    
+    <!-- NAVBAR-2 ENDING-->
+    
+    <!----------------------------------------------------------------------------------------------  -->
+    
+<!--      NAVBAR-2 Duplicate with Sub-category -->
+
+    <div th:if="${course != null}">
+    <nav class="navbar navbar-expand-lg navbar-dark p-1" style="background-color:rgba(234,1,13,255)">
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNav">
+    <ul class="navbar-nav">
+      
+       <li class="nav-item font-weight-bold" >
+        <a style="color: white !important;
+				font-size: 15px;
+				font-family: 'Barlow', sans-serif;
+				font-family: 'Nunito', sans-serif;"  href="/" class="nav-link" id="fontColorStyle">Home</a>
+      </li>
+      
+      <li th:each="urls : ${course}" class="font-weight-bold" > 	
+       <a style="color: white !important;
+				font-size: 15px;
+				font-family: 'Barlow', sans-serif;
+				font-family: 'Nunito', sans-serif;" class="nav-link ml-1" id="foreachnavbarNav "   th:href="@{'~/'+${urls.url}}"
+         th:text=${urls.name} > 
+        </a> 
+      </li>
+      
+    </ul>
+  </div>
+</nav>
+</div>
+    
+    <!-- NAVBAR-2 ENDING  Duplicate with Sub-category-->
+    
+    <!---------------------------------------------------------------------------------------------------------------- -->
+    
+    
+    
+    
+    
+    
+    
+    
+    
+     <div th:replace="${content}" ></div>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+     <!---------------------------------------------------------------------------------------------------------------- -->
+
+<!-- FOOTER START HERE -->
+	<section class="footer-sectin" id="footer">
+		<div class="container">
+			<div class="row text-center text-xs-center text-sm-left text-md-left">
+				<div class="col-xs-12 col-sm-3 col-md-3">
+					<h5 class="text-primary font-family-1" >POPULAR TOPICS</h5>
+					<ul class="list-unstyled quick-links">
+						<li><a href="#"><i class="fa fa-angle-double-right"></i>Java</a></li>
+						<li><a href="#"><i class="fa fa-angle-double-right"></i>Android</a></li>
+						<li><a href="#"><i class="fa fa-angle-double-right"></i>Spring</a></li>
+						<li><a href="#"><i class="fa fa-angle-double-right"></i>Hibernate</a></li>
+						<li><a href="#"><i class="fa fa-angle-double-right"></i>Struts</a></li>
+					</ul>
+				</div>
+				<div class="col-xs-12 col-sm-3 col-md-3">
+					<h5 class="text-primary font-family-1" >POPULAR TOPICS</h5>
+					<ul class="list-unstyled quick-links">
+						<li><a href="#"><i class="fa fa-angle-double-right"></i>c</a></li>
+						<li><a href="#"><i class="fa fa-angle-double-right"></i>c++</a></li>
+						<li><a href="#"><i class="fa fa-angle-double-right"></i>HTML</a></li>
+						<li><a href="#"><i class="fa fa-angle-double-right"></i>CSS</a></li>
+						<li><a href="#"><i class="fa fa-angle-double-right"></i>SQL</a></li>
+					</ul>
+				</div>
+				<div class="col-xs-12 col-sm-3 col-md-3">
+					<h5 class="text-primary font-family-1">REFERENCES</h5>
+					<ul class="list-unstyled quick-links">
+						<li><a href="/about-us"><i class="fa fa-angle-double-right"></i>About us</a></li>
+						<li><a href="/contact"><i class="fa fa-angle-double-right"></i>Contact us</a></li>
+						<li><a href="/contact"><i class="fa fa-angle-double-right"></i>Subscribe us</a></li>
+						<li><a href="/disclaimer"><i class="fa fa-angle-double-right"></i>Disclaimer</a></li>
+						<li><a href="#"><i class="fa fa-angle-double-right"></i>Blog</a></li>
+						<li><a href="/terms-and-conditions"><i class="fa fa-angle-double-right"></i>Terms</a></li>
+					</ul>
+				</div>
+				
+				<div class="col-xs-12 col-sm-3 col-md-3">
+					<h5 class="text-primary font-family-1">TERMS AND PRIVACY</h5>
+					<ul class="list-unstyled quick-links">
+						<li><a href="/terms-and-conditions"><i class="fa fa-angle-double-right"></i>Terms and Conditions</a></li>
+						<li><a href="/sitemap.xml"><i class="fa fa-angle-double-right"></i>Sitemap</a></li>
+						<li><a href="/privacy-policy"><i class="fa fa-angle-double-right"></i>Privacy policy</a></li>
+						</ul>
+				</div>
+				
+				
+			</div>
+		
+			<div class="row mt-4">
+				<div class="col-xs-12 col-sm-12 col-md-12 mt-2 mt-sm-2 text-center text-white">
+					<p>
+					© 2017 AndrojavaTech4U. All Rights Reserved | Design by <a href="/" class="text-primary"  >AndroJavaTech4U</a>
+					 </p>
+					<p class="h6">© All right Reversed.<a class="text-green ml-2" href="#"	>ANDROJAVATECH4U</a></p>
+				</div>
+				<hr>
+			</div>	
+		</div>
+	</section>
+	<!-- FOOTER END HERE !!!-->
+	
+	
+     <!---------------------------------------------------------------------------------------------------------------- -->
+    
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+  
+   <!-- SWEET ALERT CDN -->
+	<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+  
+  </body>
+</html>

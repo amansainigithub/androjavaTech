@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+	th:replace="admin/base::layout(~{::section})">
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+
+
+<section>
+
+
+<div class="container-fuild mt-5">
+		
+		
+		
+			<!-- 					show message Box if data is available  -->
+						<div  th:if="${session.message}" class="container">
+						<div th:classappend="${session.message.messageType}" class="alert alert-primary text-center" role="alert">
+  						<span th:text="${session.message.message}"></span>
+							</div>
+							<span th:text="${#session.removeAttribute('message')}"></span>
+						</div>
+			<!-- 					End show message Box if data is available  -->
+		
+		
+		
+		
+		
+
+			<div class="card p-4 mb-5" style="max-width: 38rem; margin: auto;">
+				<div class="card-body">
+
+					<h5 class="card-title text-center mb-4">Update Sub-Category</h5>
+
+
+					<!-- FORM STARTNG... -->
+					<form th:action="@{'~/admin/adminpanel/subCategoryUpdateNow'}" method="post" enctype="multipart/form-data" > 
+					
+
+						<div class="form-group">
+							<label for="exampleFormControlInput1">update sub category Name</label> <input
+								type="text" th:value="${subCategory.subcatName}" name="subcatName" class="form-control"
+								placeholder="category Name">
+						</div>
+
+
+
+						<div class="form-group">
+							<label for="exampleFormControlInput1">update sub category Title</label> <input
+								type="text"  th:value="${subCategory.subcatTitle}" name="subcatTitle" class="form-control"
+								placeholder="category Title">
+						</div>
+
+						<div class="form-group">
+							<label for="exampleFormControlTextarea1">update sub categoryDescription</label>
+							<textarea name="subcatDescription" class="form-control"
+								id="exampleFormControlTextarea1" rows="3"  th:text="${subCategory.subcatDescription}"></textarea>
+						</div>
+
+						<div class="form-group">
+							<label for="exampleFormControlInput1">update sub category Keyword</label> <input
+								type="text"  th:value="${subCategory.subcatKeyword}" name="subcatKeyword" class="form-control"
+								placeholder="category Keyword">
+						</div>
+
+
+
+
+						<div class="form-group">
+							<label for="exampleFormControlInput1">update sub category url</label> <input
+								type="text"  th:value="${subCategory.subcatUrl}" name="subcatUrl" class="form-control"
+								placeholder="category url">
+						</div>
+
+						<div class="form-group">
+							<label for="exampleFormControlSelect1">update status</label> <select
+								class="form-control" name="subcatStatus" >
+								<option th:classappend="${subCategory.subcatStatus=='show'? 'bg-dark':'bg-light'}" value="show" >show</option>
+								<option value="hide"  >hide</option>
+
+							</select>
+						</div>
+						
+						<div>
+						<img alt="" th:src="@{'~/subcategory_images/'+${subCategory.subcatImageName}}" height="200" width="200">
+						</div>
+						
+						<div class="form-group">
+							<label for="exampleFormControlFile1">update sub Category Image</label> <input
+								type="file" name="file" class="form-control-file"
+								id="exampleFormControlFile1">
+						</div>
+						
+						<div class="form-group">
+							<input type="hidden" name="subcatId" th:value="${subCategory.subcatId}" >
+							</div>
+							
+						
+						<div class="text-center mt-4 " >
+						<button  type="submit" class="btn btn-primary btn-block">create category</button>
+						</div>
+						
+
+
+					</form>
+
+
+
+
+
+				</div>
+			</div>
+
+
+		</div>
+
+
+
+</section>
+
+</body>
+</html>

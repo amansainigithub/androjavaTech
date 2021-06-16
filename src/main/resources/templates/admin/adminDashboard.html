@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+	th:replace="admin/base::layout(~{::section})">
+<head>
+<meta charset="ISO-8859-1">
+
+<title>Insert title here</title>
+</head>
+<body>
+	<h1>Dashboard !!!</h1>
+
+	<section>
+
+
+		<div class="container">
+		
+		
+		<h3 class="text-center text-primary  mt-5  mb-5" >Welcom,To Admin Panel</h3>
+
+			<div class="row mb-5">
+
+				<div class="col-md-4 ">
+
+							<div class="card">
+								<div class="card-body">
+								
+								<div class="text-center mt-2 mb-2">
+								<img  alt="" src="/adminDashboard_images/category.svg" height="70px" width="70px">
+								</div >
+								
+								
+									<div class="mt-4 mb-4 text-center">
+									<h5 class="card-title text-center">Create Category</h5>
+									
+									<a th:href="@{'~/admin/adminpanel/createCategoryForm'}" class="btn btn-sm btn-primary">
+									<i class="fa fa-angle-double-right" style="font-size:14px"></i>
+									Create Category</a>
+									
+									</div>
+									
+								</div>
+							</div>
+
+				</div>
+
+<!-- ------------------------------------------------------------------------------------------ -->
+				<div class="col-md-4">
+				
+							<div class="card">
+								<div class="card-body">
+								
+								<div class="text-center mt-2 mb-2">
+									 <img  alt="" src="/adminDashboard_images/list.svg" height="70px" width="70px">
+								</div >
+								
+									<div class="mt-4 mb-4 text-center">
+									 <h5 class="card-title text-center">Create Sub Category</h5>
+									
+									<a th:href="@{'~/admin/adminpanel/showSubCategoryForm'}" class="btn btn-sm btn-primary">
+									<i class="fa fa-angle-double-right" style="font-size:14px"></i>
+									Create sub Category</a>
+									
+									</div>
+								</div>
+							</div>
+				
+				</div>
+
+<!-- ------------------------------------------------------------------------------------------ -->
+
+				<div class="col-md-4">
+				
+							<div class="card">
+								<div class="card-body">
+								
+								
+									<div class="text-center mt-2 mb-2">
+									 <img  alt="" src="/adminDashboard_images/chapter.svg" height="70px" width="70px">
+								</div >
+								
+									<div class="mt-4 mb-4 text-center">
+									 <h5 class="card-title text-center">Create Chapter</h5>
+									
+									<a th:href="@{'~/admin/adminpanel/chapterForm'}" class="btn btn-sm btn-primary">
+									<i class="fa fa-angle-double-right" style="font-size:14px"></i>
+									Create Chapter</a>
+									
+									</div>
+									
+									
+							</div>
+				
+				</div>
+				
+				</div>
+
+<!-- ------------------------------------------------------------------------------------------- -->
+
+				<div class="col-md-4 mt-4">
+				
+							<div class="card">
+								<div class="card-body">
+								
+								
+									<div class="text-center mt-2 mb-2">
+									 <img  alt="" src="/adminDashboard_images/images.svg" height="70px" width="70px">
+								</div >
+								
+									<div class="mt-4 mb-4 text-center">
+									 <h5 class="card-title text-center">Image HUB</h5>
+									
+									<a th:href="@{'~/admin/adminpanel/imageHub'}" class="btn btn-sm btn-primary">
+									<i class="fa fa-angle-double-right" style="font-size:14px"></i>
+									CLICK HERE</a>
+									
+									</div>
+									
+									
+							</div>
+				
+				</div>
+				
+				</div>
+
+<!-- ------------------------------------------------------------------------------------------- -->
+
+
+				<div class="col-md-4 mt-4">
+				
+							<div class="card">
+								<div class="card-body">
+								
+								
+									<div class="text-center mt-2 mb-2">
+									 <img  alt="" src="/adminDashboard_images/exchange.svg" height="70px" width="70px">
+								</div >
+								
+									<div class="mt-4 mb-4 text-center">
+									 <h5 class="card-title text-center">update Course Category</h5>
+									
+									<a th:href="@{'~/admin/adminpanel/getCourseCatgoryList/0'}" class="btn btn-sm btn-primary">
+									<i class="fa fa-angle-double-right" style="font-size:14px"></i>
+									CLICK HERE</a>
+									
+									</div>
+									
+									
+							</div>
+				
+				</div>
+				
+				</div>
+
+<!-- ------------------------------------------------------------------------------------------- -->
+					<div class="col-md-4 mt-4">
+				
+							<div class="card">
+								<div class="card-body">
+								
+								
+									<div class="text-center mt-2 mb-2">
+									 <img  alt="" src="/adminDashboard_images/refresh.svg" height="70px" width="70px">
+								</div >
+								
+									<div class="mt-4 mb-4 text-center">
+									 <h5 class="card-title text-center">update sub Category</h5>
+									
+									<a th:href="@{'~/admin/adminpanel/getSubCatgoryList/0'}" class="btn btn-sm btn-primary">
+									<i class="fa fa-angle-double-right" style="font-size:14px"></i>
+									CLICK HERE</a>
+									
+									</div>
+									
+									
+							</div>
+				
+				</div>
+				
+				</div>
+
+<!-- ------------------------------------------------------------------------------------------- -->
+
+
+					<div class="col-md-4 mt-4">
+				
+							<div class="card">
+								<div class="card-body">
+								
+								
+									<div class="text-center mt-2 mb-2">
+									 <img  alt="" src="/adminDashboard_images/document.svg" height="70px" width="70px">
+								</div >
+								
+									<div class="mt-4 mb-4 text-center">
+									 <h5 class="card-title text-center">update chapter</h5>
+									
+									<a th:href="@{'~/admin/adminpanel/getChapterList/0'}" class="btn btn-sm btn-primary">
+									<i class="fa fa-angle-double-right" style="font-size:14px"></i>
+									CLICK HERE</a>
+									
+									</div>
+									
+									
+							</div>
+				
+				</div>
+				
+				</div>
+
+<!-- ------------------------------------------------------------------------------------------- -->
+
+
+		<div class="col-md-4 mt-4">
+				
+							<div class="card">
+								<div class="card-body">
+								
+								
+									<div class="text-center mt-2 mb-2">
+									 <img  alt="" src="/adminDashboard_images/query.svg" height="70px" width="70px">
+								</div >
+								
+									<div class="mt-4 mb-4 text-center">
+									 <h5 class="card-title text-center">Student Questions</h5>
+									
+									<a th:href="@{'~/admin/adminpanel/UsersQuery/0'}" class="btn btn-sm btn-primary">
+									<i class="fa fa-angle-double-right" style="font-size:14px"></i>
+									CLICK HERE</a>
+									
+									</div>
+									
+									
+							</div>
+				
+				</div>
+				
+				</div>
+
+<!-- ------------------------------------------------------------------------------------------- -->
+
+	<div class="col-md-4 mt-4">
+				
+							<div class="card">
+								<div class="card-body">
+								
+								
+									<div class="text-center mt-2 mb-2">
+									 <img  alt="" src="/adminDashboard_images/message.svg" height="70px" width="70px">
+								</div >
+								
+									<div class="mt-4 mb-4 text-center">
+									 <h5 class="card-title text-center">contact Form Query</h5>
+									
+									<a th:href="@{'~/admin/adminpanel/dataContactForm/0'}" class="btn btn-sm btn-primary">
+									<i class="fa fa-angle-double-right" style="font-size:14px"></i>
+									CLICK HERE</a>
+									
+									</div>
+									
+									
+							</div>
+				
+				</div>
+				
+				</div>
+
+<!-- ------------------------------------------------------------------------------------------- -->
+
+
+
+	<div class="col-md-4 mt-4">
+				
+							<div class="card">
+								<div class="card-body">
+								
+								
+									<div class="text-center mt-2 mb-2">
+									 <img  alt="" src="/adminDashboard_images/menu.svg" height="70px" width="70px">
+								</div >
+								
+									<div class="mt-4 mb-4 text-center">
+									 <h5 class="card-title text-center">Navbar Writerr</h5>
+									
+									<a th:href="@{'~/admin/adminpanel/navbarWriterForm'}" class="btn btn-sm btn-primary">
+									<i class="fa fa-angle-double-right" style="font-size:14px"></i>
+									CLICK HERE</a>
+									
+									</div>
+									
+									
+							</div>
+				
+				</div>
+				
+				</div>
+
+<!-- ------------------------------------------------------------------------------------------- -->
+
+
+			
+			
+			
+			
+
+		</div>
+
+
+
+
+
+						
+
+</div>
+
+
+
+	</section>
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>

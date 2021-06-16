@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+	th:replace="base::layout(~{::section})">
+<head>
+<meta charset="ISO-8859-1">
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap" rel="stylesheet">
+</head>
+<body >
+	<section>
+
+		<div  class="row mb-5">
+
+<!--------------------------------------------------------------------------------------------------------  -->
+			<div class="col-md-2" id="colmd-2">
+			
+				<p class="ml-3 pt-4"   >
+					<i  class='fas fa-arrow-circle-right text-success' style='font-size:16px'></i>
+					<a class=" ml-3 text-primary" th:text=${courseName} ></a>
+				</p>
+					
+					<div th:with="mycounter=0"  class="container" style="text-align:left; ;">
+					
+					<section   th:each="categoryData : ${courseCategory}" >
+						
+						<section th:each="subCategoryData,e : ${categoryData.courseSubCategories}" >
+						
+						 
+						
+						<section   th:each="chapters,e : ${subCategoryData.courseChapters}" >
+						
+						
+						
+						 <h1 th:if="${e.index==0}" class=" lm103 " >
+						 	<a class="lm110" th:href="@{'~/'+${chapters.chapterUrl}+'/sc/'+${chapters.courseSubCategory.courseCategoy.catId }}">
+							<img src="/home/images/icon_bullet.png" class='fa fa-check text-success' style='font-size:13px'/>
+							<span  th:text="${subCategoryData.subcatName}"></span>
+							</a>
+						  </h1>
+						  
+						  <section th:if="${subcatName == subCategoryData.subcatName}">
+							
+							<!-- Media Object -->
+								<!-- MEDIA-1 -->
+								<div class="media ml-2"  th:if="${title == chapters.chapterName}" >
+								  <i  class='far fa-hand-point-right' style="color: #979A9A;margin-top: 7px;font-size: 13px;"></i>
+								  
+								  <div class="media-body">
+								 
+									 <a th:if="${#strings.length(chapters.chapterName)>15}"
+									  th:href="@{'~/'+${chapters.chapterUrl}+'/sc/'+${chapters.courseSubCategory.courseCategoy.catId }}"
+									  class="ml-2 lm108" style="font-size: 14px;" >
+									
+									<span class="lm104 lm106 " th:text="${#strings.substring(chapters.chapterName,0,15)}" >
+									</span> <i class="fas fa-external-link-alt" style="color: #BDC3C7;font-size: 12px;" ></i>
+									</a>
+									
+									 <a th:if="${#strings.length(chapters.chapterName)<=15}"
+									  th:href="@{'~/'+${chapters.chapterUrl}+'/sc/'+${chapters.courseSubCategory.courseCategoy.catId }}"
+									  class="ml-2 lm108" style="font-size: 14px;" >
+									
+									<span class="lm104 lm106 " th:text="${chapters.chapterName}" >
+									</span> <i class="fas fa-external-link-alt" style="color: #BDC3C7;font-size: 12px;" ></i>
+									</a>
+								   
+								  </div>
+								</div>
+								<!-- MEDIA-1 ENDING-->
+								
+								<!-- MEDIA-2 STARTING -->
+								<div class="media ml-2"  th:if="${title != chapters.chapterName}" >
+								  <i  class='far fa-hand-point-right' style="color: #979A9A;margin-top: 7px;font-size: 13px;"></i>
+								  
+								  <div class="media-body">
+								 
+									 <a th:title="${chapters.chapterName}" th:href="@{'~/'+${chapters.chapterUrl}+'/sc/'+${chapters.courseSubCategory.courseCategoy.catId }}"
+									class="ml-2 lm108" style="font-size: 14px;" >
+									
+									<span th:if="${#strings.length(chapters.chapterName)>15}" class="lm104 lm109 "  
+										th:text=" ${#strings.substring(chapters.chapterName,0,15) }" >..
+										<i class="fas fa-external-link-alt" style="color: #BDC3C7;font-size: 12px;" ></i>
+									</span> 
+									
+									<span th:if="${#strings.length(chapters.chapterName)<=15}" class="lm104 lm109 "  
+										th:text=" ${chapters.chapterName }" >
+									</span> 
+									</a>
+								   
+								  </div>
+								</div>
+								<!-- MEDIA-2 ENDING-->
+														
+
+							</section>
+						 	 
+						</section>
+						
+						</section>
+						
+					
+					</section>
+					
+					</div>
+			
+			</div>
+
+
+<!--------------------------------------------------------------------------------------------------------  -->
+
+			<div class="col-md-7 mt-4" id="lm100">
+			
+			<div class="ml-2 mt-2 sidebarIcon"  >
+				<i class="fa fa-bars" onclick="toggleSidebar()" aria-hidden="true" style="font-size: 22px;cursor:pointer ;" ></i>
+			</div>
+			
+			
+<!-- PAGINATION sTARTING -->
+	
+<div class="row mt-3 mb-3">
+
+	<div class="col-sm-4 offset-sm-8">
+	
+		<div class="row">
+			
+			<div th:if="${previous != null}" class="col-sm-6">
+				<a type="button" class="btn btn-primary" 
+			     th:href="@{'~/'+${previous}}" >
+			     <i class='fas fa-long-arrow-alt-left' style='font-size:16px'></i>
+			     Previous</a>
+			</div>
+			
+			<div th:if="${previous == null}" class="col-sm-6">
+				<button type="button" class="btn btn-primary" disabled >
+				<i class='fas fa-long-arrow-alt-left' style='font-size:16px'></i>
+				 Previous</button>
+			</div>
+			
+			<div class="col-sm-6" th:if="${nextUrl != null}"  >
+				<a type="button" class="btn btn-primary" th:href="@{'~/'+${nextUrl}}">
+				Next
+				<i class='fas fa-long-arrow-alt-right' style='font-size:16px'></i>
+				</a>
+			</div>
+			
+		</div>
+	
+	</div>
+
+
+
+</div>
+
+<!-- PAGINATION ENDING  -->
+						
+						
+						
+						
+						<h1 id="lm101" class=" pl-4 mt-2">
+							<span th:text="${singleChapter.chapterName}" ></span>
+						</h1>
+						
+
+						<!-- CHAPTER CONTENT -->
+						<div class="pl-4 pr-4">
+							<span th:remove="tag"  th:utext="${singleChapter.chapterContent}"></span>
+						</div>
+						
+					
+					
+					<!--***********  -->
+					
+
+
+					
+			</div>
+			
+<!--------------------------------------------------------------------------------------------------------  -->
+
+
+			<div class="col-md-3">
+				<h1> Google-ADS </h1>
+				
+			
+				
+				
+			</div>
+			
+			
+<!--------------------------------------------------------------------------------------------------------  -->
+		</div>
+
+	</section>
+</body>
+</html>

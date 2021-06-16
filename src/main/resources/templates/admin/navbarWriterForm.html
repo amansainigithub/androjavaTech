@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html  xmlns:th="http://www.thymeleaf.org"
+	th:replace="admin/base::layout(~{::section})">
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+
+
+<section>
+
+
+
+	
+	
+	<div class="container mt-5">
+	
+	
+	
+	
+	
+		<!-- 					show message Box if data is available  -->
+						<div  th:if="${session.message}" class="container">
+						<div th:classappend="${session.message.messageType}" class="alert alert-primary text-center" role="alert">
+  						<span th:text="${session.message.message}"></span>
+							</div>
+							<span th:text="${#session.removeAttribute('message')}"></span>
+						</div>
+			<!-- 					End show message Box if data is available  -->
+			
+			
+			
+			
+	
+<div class="card" style="max-width: 18rem;margin: auto;" >
+
+		<div class="card-body">
+		
+	    <h5 class="card-title">Change value</h5>
+		
+			<!-- Form Starting -->
+			<form th:action="@{'~/admin/adminpanel/changeNavbarValue'}" method="post"  >
+				  <div class="form-group">
+				  
+				    <strong>Only Specified a Number *</strong>
+				     <input type="text" name="navbarValue" th:value="${data}" required="required" class="form-control"  placeholder="Enter Value">
+				  </div>
+				
+			 <button type="submit" class="btn btn-primary btn-sm">Change Value</button>
+			</form>
+			<!-- Form Ending -->
+		
+		</div>
+		
+	</div>
+	
+</div>
+
+
+</section>
+
+</body>
+</html>

@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html  xmlns:th="http://www.thymeleaf.org"
+	th:replace="admin/base::layout(~{::section})">
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+
+<section>
+
+
+		<div class="container">
+		
+		
+		
+			<!-- 					show message Box if data is available  -->
+						<div  th:if="${session.message}" class="container">
+						<div th:classappend="${session.message.messageType}" class="alert alert-primary text-center" role="alert">
+  						<span th:text="${session.message.message}"></span>
+							</div>
+							<span th:text="${#session.removeAttribute('message')}"></span>
+						</div>
+			<!-- 					End show message Box if data is available  -->
+			
+			
+			
+			
+		
+		<h4 class="text-center mt-4 mb-3">User Questions List</h4>
+
+			<table  style="font-size: 12px;" class="table">
+				<thead class="thead-dark">
+					<tr>
+						<th scope="col">id</th>
+						<th scope="col">Name</th>
+						<th scope="col">LastName</th>
+						<th scope="col">Email</th>
+						<th scope="col">Course</th>
+						<th scope="col">Mobile</th>
+						<th scope="col">delete</th>
+						
+					</tr>
+				</thead>
+				<tbody>
+					<tr th:each="contactDataList : ${listContactQuery}" >
+					
+						<th  scope="row"><span th:text="${contactDataList.id}" ></span></th>
+						
+						
+						<td><span th:text="${contactDataList.name}" ></span></td>
+						
+						
+						<td><span th:text="${contactDataList.lastName}" ></span></td>
+						
+						
+						<td><span th:text="${contactDataList.email}" ></span></td>
+						
+						<td><span th:text="${contactDataList.course}" ></span></td>
+						
+						<td><span th:text="${contactDataList.mobile}" ></span></td>
+						
+						
+							
+						<td>
+						<!-- Category Id and Url Pattern Name -->
+							<button th:onclick="|deleteCategoryOrChapter(${contactDataList.id},'deletecontactQuery')|" 
+							type="button" class="btn btn-sm btn-danger ">
+							<i class="fas fa-times"></i>
+							delete</button>
+						</td>
+					
+						
+					</tr>
+					
+				</tbody>
+			</table>
+			
+			
+			
+			
+			
+				<!-- Pagination Start -->
+		
+		<nav aria-label="Page navigation example" class="mt-3" >
+ 			 
+ 			 <ul class="pagination justify-content-center" >
+   			 	
+   			 	<li th:if="${currentpage != 0}" class="page-item"><a class="page-link" th:href="@{'~/admin/adminpanel/UsersQuery/'+${currentpage-1}}">Previous</a></li>
+
+   				 <li><button type="button" class="btn btn-light " th:text="${currentpage+1}" ></button> </li>
+   				<li th:if="${currentpage+1 != totalPages}" class="page-item"><a class="page-link" th:href="@{'~/admin/adminpanel/UsersQuery/'+${currentpage+1}}">Next</a></li>
+ 		    </ul>
+ 		    
+		</nav>
+		
+		<!-- Pagination End!! -->
+			
+			
+			
+		
+		</div>
+		<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+
+</section>
+
+
+</body>
+</html>

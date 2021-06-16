@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html  xmlns:th="http://www.thymeleaf.org"
+	th:replace="admin/base::layout(~{::section})">
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+
+
+
+<section>
+
+	<div class="container mt-5">
+		
+		<h5 class="text-center text-primary p-5" >Welcome image HUB</h5>
+	
+		<div class="card border-0" style="max-width: 26rem;margin: auto;">
+  			<div class="card-body">
+  			
+  			<div class="row">
+  			
+  			<!-- ************************** -->
+  				<div class="col-md-6">
+  					
+  					<div class="text-center" >
+  					<i class="fa fa-upload text-success" style="font-size:24px"></i><br>
+  						<a th:href="@{'~/admin/adminpanel/getImageHubUploadForm'}" type="button" class="btn  btn-small btn btn-outline-dark mt-2 " >upload image</a>
+  					</div>
+  					
+  				</div>
+  				
+  			<!-- ************************** -->	
+  				
+  			
+  				<div class="col-md-6 ad101"  >
+  					<div class="text-center" >
+  					<i class="fas fa-image text-primary"  style="font-size:24px"></i><br>
+  						<a th:href="@{'~/admin/adminpanel/getImageHubImages'}" type="button" 
+  							class="btn btn-light text-dark btn-small mt-2 " >
+  							get images
+  						</a>
+  					</div>
+  				</div>
+  				
+  			<!-- ************************** -->
+  			
+  			</div>
+    
+  			</div>
+		</div>
+	
+	
+	</div>
+	
+
+</section>
+
+
+</body>
+</html>
