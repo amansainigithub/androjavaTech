@@ -109,33 +109,33 @@
 
 			<div class="col-md-7 mt-4" id="lm100">
 			
-			<div class="ml-2 mt-2 sidebarIcon"  >
-				<i class="fa fa-bars" onclick="toggleSidebar()" aria-hidden="true" style="font-size: 22px;cursor:pointer ;" ></i>
-			</div>
+<!-- 			<div class="ml-2 mt-2 sidebarIcon"  > -->
+<!-- 				<i class="fa fa-bars" onclick="toggleSidebar()" aria-hidden="true" style="font-size: 22px;cursor:pointer ;" ></i> -->
+<!-- 			</div> -->
 			
 			
 <!-- PAGINATION sTARTING -->
 	
 <div class="row mt-3 mb-3">
 
-	<div class="col-sm-4 offset-sm-8">
+	<div class="col-sm-11" style="display: flex; flex-direction: row-reverse;">
 	
-		<div class="row">
+		<div class="row mr-5">
 			
-			<div th:if="${previous != null}" class="col-sm-6">
-				<a type="button" class="btn btn-primary" 
+			<div th:if="${previous != null}" >
+				<a type="button" class="btn btn-primary mr-3" 
 			     th:href="@{'~/'+${previous}}" >
 			     <i class='fas fa-long-arrow-alt-left' style='font-size:16px'></i>
 			     Previous</a>
 			</div>
 			
-			<div th:if="${previous == null}" class="col-sm-6">
-				<button type="button" class="btn btn-primary" disabled >
+			<div th:if="${previous == null}"  >
+				<button type="button" class="btn btn-primary mr-3" disabled >
 				<i class='fas fa-long-arrow-alt-left' style='font-size:16px'></i>
 				 Previous</button>
 			</div>
 			
-			<div class="col-sm-6" th:if="${nextUrl != null}"  >
+			<div  th:if="${nextUrl != null}"  >
 				<a type="button" class="btn btn-primary" th:href="@{'~/'+${nextUrl}}">
 				Next
 				<i class='fas fa-long-arrow-alt-right' style='font-size:16px'></i>
@@ -178,9 +178,6 @@
 
 
 			<div class="col-md-3">
-				<h1> Google-ADS </h1>
-				
-			
 				
 				
 			</div>
