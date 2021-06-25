@@ -8,24 +8,314 @@
 
 
 <url>
-  <loc>http://androjavatech4u.com/</loc>
-  <lastmod>2018-01-20T05:17:02+00:00</lastmod>
+  <loc>https://androjavatech4u.com/</loc>
+  <lastmod>2021-06-18T18:20:51+00:00</lastmod>
   <priority>1.00</priority>
 </url>
 <url>
-  <loc>http://androjavatech4u.com/index.jsp</loc>
-  <lastmod>2018-01-20T05:17:02+00:00</lastmod>
+  <loc>https://androjavatech4u.com/Java/chapter/1</loc>
+  <lastmod>2021-06-18T18:20:51+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>http://androjavatech4u.com/chapter.jsp</loc>
-  <lastmod>2018-01-20T05:17:02+00:00</lastmod>
+  <loc>https://androjavatech4u.com/Android/chapter/2</loc>
+  <lastmod>2021-06-18T18:20:51+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>http://androjavatech4u.com/course-list.jsp</loc>
-  <lastmod>2018-01-20T05:17:02+00:00</lastmod>
+  <loc>https://androjavatech4u.com/Testing/chapter/3</loc>
+  <lastmod>2021-06-18T18:20:51+00:00</lastmod>
   <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://androjavatech4u.com/Python/chapter/4</loc>
+  <lastmod>2021-06-18T18:20:51+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://androjavatech4u.com/PHP/chapter/5</loc>
+  <lastmod>2021-06-18T18:20:51+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://androjavatech4u.com/JavaScript/chapter/6</loc>
+  <lastmod>2021-06-18T18:20:51+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://androjavatech4u.com/DBMS/chapter/7</loc>
+  <lastmod>2021-06-18T18:20:51+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://androjavatech4u.com/C/chapter/8</loc>
+  <lastmod>2021-06-18T18:20:51+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://androjavatech4u.com/CSharp/chapter/9</loc>
+  <lastmod>2021-06-18T18:20:51+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://androjavatech4u.com/DS/chapter/66</loc>
+  <lastmod>2021-06-18T18:20:51+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://androjavatech4u.com/HTML/chapter/67</loc>
+  <lastmod>2021-06-18T18:20:51+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://androjavatech4u.com/Selenium/chapter/68</loc>
+  <lastmod>2021-06-18T18:20:51+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://androjavatech4u.com/Interview-Questions/chapter/69</loc>
+  <lastmod>2021-06-18T18:20:51+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://androjavatech4u.com/Appium/chapter/70</loc>
+  <lastmod>2021-06-18T18:20:51+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://androjavatech4u.com/SQL/chapter/71</loc>
+  <lastmod>2021-06-18T18:20:51+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://androjavatech4u.com/Node-JS/chapter/72</loc>
+  <lastmod>2021-06-18T18:20:51+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://androjavatech4u.com/React-JS/chapter/73</loc>
+  <lastmod>2021-06-18T18:20:51+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://androjavatech4u.com/contact</loc>
+  <lastmod>2021-06-18T18:20:51+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://androjavatech4u.com/about-us</loc>
+  <lastmod>2021-06-18T18:20:51+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://androjavatech4u.com/terms-and-conditions</loc>
+  <lastmod>2021-06-18T18:20:51+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://androjavatech4u.com/privacy-policy</loc>
+  <lastmod>2021-06-18T18:20:51+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://androjavatech4u.com/JavaIntroduction/sc/1</loc>
+  <lastmod>2021-06-18T18:20:51+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://androjavatech4u.com/Java-Keyword/sc/1</loc>
+  <lastmod>2021-06-18T18:20:51+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://androjavatech4u.com/What-is-Object/sc/1</loc>
+  <lastmod>2021-06-18T18:20:51+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://androjavatech4u.com/What-is-Package/sc/1</loc>
+  <lastmod>2021-06-18T18:20:51+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://androjavatech4u.com/What-is-Modifiers-/sc/1</loc>
+  <lastmod>2021-06-18T18:20:51+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://androjavatech4u.com/What-is-Array/sc/1</loc>
+  <lastmod>2021-06-18T18:20:51+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://androjavatech4u.com/What-is-String/sc/1</loc>
+  <lastmod>2021-06-18T18:20:51+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://androjavatech4u.com/What-is-Program/sc/1</loc>
+  <lastmod>2021-06-18T18:20:51+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://androjavatech4u.com/What-is-Software/sc/1</loc>
+  <lastmod>2021-06-18T18:20:51+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://androjavatech4u.com/History-of-Java%20/sc/1</loc>
+  <lastmod>2021-06-18T18:20:51+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://androjavatech4u.com/Programming-Methodology/sc/1</loc>
+  <lastmod>2021-06-18T18:20:51+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://androjavatech4u.com/C-vs.-C++/sc/1</loc>
+  <lastmod>2021-06-18T18:20:51+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://androjavatech4u.com/C++-Vs-Java/sc/1</loc>
+  <lastmod>2021-06-18T18:20:51+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://androjavatech4u.com/JVM,-JRE-&amp;-JDK/sc/1</loc>
+  <lastmod>2021-06-18T18:20:51+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://androjavatech4u.com/JVM-Architecture/sc/1</loc>
+  <lastmod>2021-06-18T18:20:51+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://androjavatech4u.com/How-to-set-path/sc/1</loc>
+  <lastmod>2021-06-18T18:20:51+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://androjavatech4u.com/First-Java-Program/sc/1</loc>
+  <lastmod>2021-06-18T18:20:51+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://androjavatech4u.com/Java-Features/sc/1</loc>
+  <lastmod>2021-06-18T18:20:51+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://androjavatech4u.com/Java%20Identifiers/sc/1</loc>
+  <lastmod>2021-06-18T18:20:51+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://androjavatech4u.com/Java-Variable/sc/1</loc>
+  <lastmod>2021-06-18T18:20:51+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://androjavatech4u.com/Java--Literals/sc/1</loc>
+  <lastmod>2021-06-18T18:20:51+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://androjavatech4u.com/Java-DataType/sc/1</loc>
+  <lastmod>2021-06-18T18:20:51+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://androjavatech4u.com/Type-Conversion/sc/1</loc>
+  <lastmod>2021-06-18T18:20:51+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://androjavatech4u.com/Java-Control-Statement-/sc/1</loc>
+  <lastmod>2021-06-18T18:20:51+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://androjavatech4u.com/Java-Operators/sc/1</loc>
+  <lastmod>2021-06-18T18:20:51+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://androjavatech4u.com/Separators-In-Java/sc/1</loc>
+  <lastmod>2021-06-18T18:20:51+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://androjavatech4u.com/Java-Comments-/sc/1</loc>
+  <lastmod>2021-06-18T18:20:51+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://androjavatech4u.com/Java-Methods/sc/1</loc>
+  <lastmod>2021-06-18T18:20:51+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://androjavatech4u.com/Java-Class/sc/1</loc>
+  <lastmod>2021-06-18T18:20:51+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://androjavatech4u.com/Java-Constructor/sc/1</loc>
+  <lastmod>2021-06-18T18:20:51+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://androjavatech4u.com/Java-Object-Class-/sc/1</loc>
+  <lastmod>2021-06-18T18:20:51+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://androjavatech4u.com/Java-Static-Keyword/sc/1</loc>
+  <lastmod>2021-06-18T18:20:51+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://androjavatech4u.com/Java-Class-Loading/sc/1</loc>
+  <lastmod>2021-06-18T18:20:51+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://androjavatech4u.com/What-is-Exception/sc/1</loc>
+  <lastmod>2021-06-18T18:20:51+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://androjavatech4u.com/What-is-Thread/sc/1</loc>
+  <lastmod>2021-06-18T18:20:51+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://androjavatech4u.com/What-is-AWT/sc/1</loc>
+  <lastmod>2021-06-18T18:20:51+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://androjavatech4u.com/What-is-Swing/sc/1</loc>
+  <lastmod>2021-06-18T18:20:51+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://androjavatech4u.com/What-is-Applet/sc/1</loc>
+  <lastmod>2021-06-18T18:20:51+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://androjavatech4u.com/What-is-IO/sc/1</loc>
+  <lastmod>2021-06-18T18:20:51+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://androjavatech4u.com/About-Android/sc/2</loc>
+  <lastmod>2021-06-18T18:20:51+00:00</lastmod>
+  <priority>0.64</priority>
 </url>
 
 
